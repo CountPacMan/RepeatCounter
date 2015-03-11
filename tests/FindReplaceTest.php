@@ -20,6 +20,20 @@
             $this->assertEquals("Hello universe", $result);
         }
 
+        function test_findReplacePartialWords()
+        {
+            //Arrange
+            $test_FindReplace = new FindReplace;
+            $big_string = "I am walking my cat to the cathedral";
+            $to_replace = "cat";
+            $replacement = "dog";
+
+            //Act
+            $result = $test_FindReplace->replace($big_string, $to_replace, $replacement);
+
+            //Assert
+            $this->assertEquals("I am walking my dog to the doghedral", $result);
+        }
 
     }
 
