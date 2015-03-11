@@ -3,19 +3,16 @@
 <head>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="/css/styles.css">
-  <title>RockPaperScissors</title>
+  <title>Find and Replace</title>
 </head>
 <body>
   <div class="container">
-    <h1>RockPaperScissors</h1>
-    <p>RockPaperScissors is a game played by 2 people. Each person chooses "Rock", "Paper", or "Scissors" by forming a shape with their hand. They choose at the same time, so that each person doesn't know what the other person has picked. If one person chooses "Rock" and the other person picks "Scissors" then "Rock" wins. It's a game of combinations: Rock v. Scissors = Rock wins
-    Rock v. Paper = Paper wins
-    Paper v. Scissors = Scissors wins
-    If both people choose the same thing, then it is a draw and nobody wins.</p>
+    <h1>Find and Replace a word</h1>
+    <p>A user enters a string, chooses a word in that string and provides a replacement for that word.</p>
   </div>
   <form class="center" action="/generate" method="post">
     <div class="row">
-      <span><strong>Player 1</strong></span>
+      <span><strong>Enter a word:</strong></span>
       <div class="radio">
         <label><input type="radio" name="player1" value="rock">rock</label>
       </div>
@@ -42,10 +39,5 @@
       <button type="submit" class="btn-primary">Play!</button>
     </div>
   </form>
-  <div>
-    <form class="center" action="/computer">
-      <button type="submit" class="btn-warning">Play against the Computer</button>
-    </form>
-  </div>
 </body>
 </html>

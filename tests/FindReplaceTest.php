@@ -35,6 +35,37 @@
             $this->assertEquals("I am walking my dog to the doghedral", $result);
         }
 
+        function test_findReplaceBiscuitedCase()
+        {
+            //Arrange
+            $test_FindReplace = new FindReplace;
+            $big_string = "I am walking my CaT to the cAthedral";
+            $to_replace = "cat";
+            $replacement = "dog";
+
+            //Act
+            $result = $test_FindReplace->replace($big_string, $to_replace, $replacement);
+
+            //Assert
+            $this->assertEquals("I am walking my dog to the doghedral", $result);
+        }
+
+        function test_findReplaceVeryBiscuitedCase()
+        {
+            //Arrange
+            $test_FindReplace = new FindReplace;
+            $big_string = "I am walking my CaT to the cAtheDRal";
+            $to_replace = "cat";
+            $replacement = "dog";
+
+            //Act
+            $result = $test_FindReplace->replace($big_string, $to_replace, $replacement);
+
+            //Assert
+            $this->assertEquals("I am walking my dog to the dogheDRal", $result);
+        }
+
+
     }
 
 ?>

@@ -12,7 +12,7 @@
   $app->post("/generate", function() use ($app) {
     $player1 = $_POST['player1'];
     $player2 = $_POST['player2'];
-    $newGame = new RockPaperScissors();
+    $newGame = new FindReplace();
     $result = $newGame->play($player1, $player2);
     return $app['twig']->render('generate.twig', array('player1' => $player1, 'player2' => $player2, 'result' => $result, 'computer' => false));
   });
@@ -23,7 +23,7 @@
 
   $app->post("/computerGenerate", function() use ($app) {
     $player1 = $_POST['player1'];
-    $newGame = new RockPaperScissors();
+    $newGame = new FindReplace();
     $player2 = $newGame->playComputer($player1);
     $result = $newGame->play($player1, $player2);
     return $app['twig']->render('generate.twig', array('player1' => $player1, 'player2' => $player2, 'result' => $result, 'computer' => true));
