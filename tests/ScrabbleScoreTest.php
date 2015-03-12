@@ -14,14 +14,16 @@
 
     // Test 1: A = 1
     // Test 2: A + E = 2
-    // Test 3: D = 2
-    // Test 4: A + D = 4
-    // Test 5: A + D + B + F + K + J + Q = 33
+    // Test 3: A + A = 2
+    // Test 4: D = 2
+    // Test 5: A + D = 4
+    // Test 6: B + K = 8
+    // Test 7: A + D + B + F + K + J + Q = 33
 
     class ScrabbleScoreTest extends PHPUnit_Framework_TestCase
     {
 
-        function test_ScrabbleScore()
+        function test_ScrabbleScore_singleLetter()
         {
             //Arrange
             $test_ScrabbleScore = new ScrabbleScore;
@@ -32,6 +34,45 @@
 
             //Assert
             $this->assertEquals("1", $result);
+        }
+
+        function test_ScrabbleScore_twoLetter()
+        {
+            //Arrange
+            $test_ScrabbleScore = new ScrabbleScore;
+            $letters = ['a', 'e'];
+
+            //Act
+            $result = $test_ScrabbleScore->getScore($letters);
+
+            //Assert
+            $this->assertEquals("2", $result);
+        }
+
+        function test_ScrabbleScore_twoDuplicateLetter()
+        {
+            //Arrange
+            $test_ScrabbleScore = new ScrabbleScore;
+            $letters = ['a', 'a'];
+
+            //Act
+            $result = $test_ScrabbleScore->getScore($letters);
+
+            //Assert
+            $this->assertEquals("2", $result);
+        }
+
+        function test_ScrabbleScore_twoPointLetter()
+        {
+            //Arrange
+            $test_ScrabbleScore = new ScrabbleScore;
+            $letters = ['d'];
+
+            //Act
+            $result = $test_ScrabbleScore->getScore($letters);
+
+            //Assert
+            $this->assertEquals("2", $result);
         }
 
     }
