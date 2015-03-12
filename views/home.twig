@@ -3,30 +3,22 @@
 <head>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="/css/styles.css">
-  <title>Find and Replace</title>
+  <title>Scrabble Score</title>
 </head>
 <body>
   <div class="container">
-    <h1>Find and Replace a word</h1>
-    <p>A user enters a string, chooses a word in that string and provides a replacement for that word.</p>
+    <h1>Scrabble Score</h1>
+    <p>Takes a word and returns the Scrabble score.</p>
   </div>
   <form class="center" action="/generate" method="post">
     <div class="row">
       <div class="form-group col-lg-4">
-        <label for="big_string">Enter original phrase:</label>
-        <input id="big_string" name="big_string" type="text" maxlength="200" required>
-      </div>
-      <div class="form-group col-lg-4">
-        <label for="to_replace">Enter word or partial to replace:</label>
-        <input id="to_replace" name="to_replace" type="text" maxlength="200" required>
-      </div>
-      <div class="form-group col-lg-4">
-        <label for="replacement">Enter replacement:</label>
-        <input id="replacement" name="replacement" type="text" maxlength="200" required>
+        <label for="letters">Enter word or unseperated letters:</label>
+        <input id="letters" name="letters" type="text" maxlength="200" required>
       </div>
     </div>
     <div>
-      <button type="submit" class="btn-primary">Find/Replace!</button>
+      <button type="submit" class="btn-primary">Get Score!</button>
     </div>
   </form>
 </body>
