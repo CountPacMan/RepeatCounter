@@ -1,16 +1,23 @@
-# Find and Replace for Epicodus
-## by Daniel Toader and Geoff Winner
-### Date: March 11, 2015
+# Scrabble Score for Epicodus
+## by Daniel Toader and Patrick Fiorentino
+### Date: March 12, 2015
 #### Description
-A user enters a string, chooses a word in that string and provides a replacement for that word.
+Takes a word and returns the Scrabble score for it according to these values:
+- A, E, I, O, U, L, N, R, S, T       1
+- D, G                               2
+- B, C, M, P                         3
+- F, H, V, W, Y                      4
+- K                                  5
+- J, X                               8
+- Q, Z                               10
 
 #### Setup instructions
 1. Clone this git repository
-2. Set your localhost root folder to ~/FindReplace/web/
+2. Set your localhost root folder to ~/ScrabbleScore/web/
 3. Ensure PHP server is running.
 4. Start the web app by pointing your browser to the root (http://localhost:8000/)  
 
-#### Copyright © 2015, Daniel Toader and Geoff Winner
+#### Copyright © 2015, Daniel Toader and Patrick Fiorentino
 
 #### License: [MIT](https://github.com/twbs/bootstrap/blob/master/LICENSE")  
 
