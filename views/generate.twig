@@ -8,11 +8,12 @@
 <body>
   <div class="container">
     <h1>Find and Replace</h1>
-    <h5>Player 1 played {{ player1 }}</h5>
-    <h5>Player 2 played {{ player2 }}</h5>
-    <h4>{{ result }} won.</h4>
+    <h4>Original phrase: {{ big_string }}</h4>
+    <h4>Word to replace: {{ to_replace }}</h4>
+    <h4>Replacement: {{ replacement }}</h4>
+    <h5>Final phrase: {{ new_sentence }}</h5>
   </div>
-  <form class="center" action={{ computer ? "/computer" : "/" }}>
+  <form class="center" action="/">
     <button type="submit" class="btn-primary">Return Home</button>
   </form>
 </body>
