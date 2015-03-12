@@ -3,13 +3,13 @@
 ### Date: March 12, 2015
 #### Description
 Takes a word and returns the Scrabble score for it according to these values:
-- A, E, I, O, U, L, N, R, S, T       1
-- D, G                               2
-- B, C, M, P                         3
-- F, H, V, W, Y                      4
-- K                                  5
-- J, X                               8
-- Q, Z                               10
+- A, E, I, O, U, L, N, R, S, T  =     1
+- D, G                            =     2
+- B, C, M, P                     =      3
+- F, H, V, W, Y                  =      4
+- K                               =     5
+- J, X                            =     8
+- Q, Z                            =     10
 
 #### Setup instructions
 1. Clone this git repository
