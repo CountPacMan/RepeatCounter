@@ -16,7 +16,7 @@
     // Test 2: A + E = 2
     // Test 3: A + A = 2
     // Test 4: D = 2
-    // Test 5: A + D = 4
+    // Test 5: A + D = 3
     // Test 6: B + K = 8
     // Test 7: A + D + B + F + K + J + Q = 33
 
@@ -75,6 +75,44 @@
             $this->assertEquals("2", $result);
         }
 
+        function test_ScrabbleScore_twoPointOnePointLetter()
+        {
+            //Arrange
+            $test_ScrabbleScore = new ScrabbleScore;
+            $letters = ['a', 'd'];
+
+            //Act
+            $result = $test_ScrabbleScore->getScore($letters);
+
+            //Assert
+            $this->assertEquals("3", $result);
+        }
+
+        function test_ScrabbleScore_threePointFivePointLetter()
+        {
+            //Arrange
+            $test_ScrabbleScore = new ScrabbleScore;
+            $letters = ['b', 'k'];
+
+            //Act
+            $result = $test_ScrabbleScore->getScore($letters);
+
+            //Assert
+            $this->assertEquals("8", $result);
+        }
+
+        function test_ScrabbleScore_multiLetter()
+        {
+            //Arrange
+            $test_ScrabbleScore = new ScrabbleScore;
+            $letters = ["A", "D", "B", "F", "K", "J", "Q"];
+
+            //Act
+            $result = $test_ScrabbleScore->getScore($letters);
+
+            //Assert
+            $this->assertEquals("33", $result);
+        }
     }
 
 ?>
