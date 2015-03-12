@@ -10,8 +10,9 @@
   });
 
   $app->post("/generate", function() use ($app) {
+    $letters = str_split($_POST['letters']);
     $new_scrabble = new ScrabbleScore;
-    $score = $new_scrabble->getScore($_POST['letters']);
+    $score = $new_scrabble->getScore($letters);
     return $app['twig']->render('generate.twig', array('letters' => $_POST['letters'], 'score' => $score));
   });
 
