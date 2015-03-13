@@ -6,7 +6,7 @@
         $count = 0;
         $exploded_haystack = explode(" ", $haystack);
         foreach ($exploded_haystack as $word) {
-          $word == $needle ? $count++ : "";
+          strtolower($word) == strtolower($needle) ? $count++ : "";
         }
         return $count;
       }
