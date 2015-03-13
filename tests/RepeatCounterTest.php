@@ -30,238 +30,235 @@
 
     class RepeatCounterTest extends PHPUnit_Framework_TestCase
     {
-        // Single char words
+      // Single char words
 
-        function test_RepeatCounter_test1()
-        {
-            //Arrange
-            $test_RepeatCounter = new RepeatCounter;
-            $haystack = "a";
-            $needle = "a";
+      function test_RepeatCounter_test1()
+      {
+        //Arrange
+        $test_RepeatCounter = new RepeatCounter;
+        $haystack = "a";
+        $needle = "a";
 
-            //Act
-            $result = $test_RepeatCounter->countRepeats($haystack, $needle);
+        //Act
+        $result = $test_RepeatCounter->countRepeats($haystack, $needle);
 
-            //Assert
-            $this->assertEquals(1, $result);
-        }
+        //Assert
+        $this->assertEquals(1, $result);
+      }
 
-        function test_RepeatCounter_test2()
-        {
-            //Arrange
-            $test_RepeatCounter = new RepeatCounter;
-            $haystack = "a";
-            $needle = "b";
+      function test_RepeatCounter_test2()
+      {
+        //Arrange
+        $test_RepeatCounter = new RepeatCounter;
+        $haystack = "a";
+        $needle = "b";
 
-            //Act
-            $result = $test_RepeatCounter->countRepeats($haystack, $needle);
+        //Act
+        $result = $test_RepeatCounter->countRepeats($haystack, $needle);
 
-            //Assert
-            $this->assertEquals(0, $result);
-        }
+        //Assert
+        $this->assertEquals(0, $result);
+      }
 
-        function test_RepeatCounter_test3()
-        {
-            //Arrange
-            $test_RepeatCounter = new RepeatCounter;
-            $haystack = "ab";
-            $needle = "a";
+      function test_RepeatCounter_test3()
+      {
+        //Arrange
+        $test_RepeatCounter = new RepeatCounter;
+        $haystack = "ab";
+        $needle = "a";
 
-            //Act
-            $result = $test_RepeatCounter->countRepeats($haystack, $needle);
+        //Act
+        $result = $test_RepeatCounter->countRepeats($haystack, $needle);
 
-            //Assert
-            $this->assertEquals(0, $result);
-        }
+        //Assert
+        $this->assertEquals(0, $result);
+      }
 
-        function test_RepeatCounter_test4()
-        {
-            //Arrange
-            $test_RepeatCounter = new RepeatCounter;
-            $haystack = "aa";
-            $needle = "a";
+      function test_RepeatCounter_test4()
+      {
+        //Arrange
+        $test_RepeatCounter = new RepeatCounter;
+        $haystack = "aa";
+        $needle = "a";
 
-            //Act
-            $result = $test_RepeatCounter->countRepeats($haystack, $needle);
+        //Act
+        $result = $test_RepeatCounter->countRepeats($haystack, $needle);
 
-            //Assert
-            $this->assertEquals(0, $result);
-        }
+        //Assert
+        $this->assertEquals(0, $result);
+      }
 
-        function test_RepeatCounter_test5()
-        {
-            //Arrange
-            $test_RepeatCounter = new RepeatCounter;
-            $haystack = "a a";
-            $needle = "a";
+      function test_RepeatCounter_test5()
+      {
+        //Arrange
+        $test_RepeatCounter = new RepeatCounter;
+        $haystack = "a a";
+        $needle = "a";
 
-            //Act
-            $result = $test_RepeatCounter->countRepeats($haystack, $needle);
+        //Act
+        $result = $test_RepeatCounter->countRepeats($haystack, $needle);
 
-            //Assert
-            $this->assertEquals(2, $result);
-        }
+        //Assert
+        $this->assertEquals(2, $result);
+      }
 
-        function test_RepeatCounter_test6()
-        {
-            //Arrange
-            $test_RepeatCounter = new RepeatCounter;
-            $haystack = "a b a";
-            $needle = "a";
+      function test_RepeatCounter_test6()
+      {
+        //Arrange
+        $test_RepeatCounter = new RepeatCounter;
+        $haystack = "a b a";
+        $needle = "a";
 
-            //Act
-            $result = $test_RepeatCounter->countRepeats($haystack, $needle);
+        //Act
+        $result = $test_RepeatCounter->countRepeats($haystack, $needle);
 
-            //Assert
-            $this->assertEquals(2, $result);
-        }
+        //Assert
+        $this->assertEquals(2, $result);
+      }
 
-        // Multi char words
+      // Multi char words
 
-        function test_RepeatCounter_test7()
-        {
-            //Arrange
-            $test_RepeatCounter = new RepeatCounter;
-            $haystack = "abba";
-            $needle = "abba";
+      function test_RepeatCounter_test7()
+      {
+        //Arrange
+        $test_RepeatCounter = new RepeatCounter;
+        $haystack = "abba";
+        $needle = "abba";
 
-            //Act
-            $result = $test_RepeatCounter->countRepeats($haystack, $needle);
+        //Act
+        $result = $test_RepeatCounter->countRepeats($haystack, $needle);
 
-            //Assert
-            $this->assertEquals(1, $result);
-        }
+        //Assert
+        $this->assertEquals(1, $result);
+      }
 
-        function test_RepeatCounter_test8()
-        {
-            //Arrange
-            $test_RepeatCounter = new RepeatCounter;
-            $haystack = "a abb word ababba abba";
-            $needle = "abba";
+      function test_RepeatCounter_test8()
+      {
+        //Arrange
+        $test_RepeatCounter = new RepeatCounter;
+        $haystack = "a abb word ababba abba";
+        $needle = "abba";
 
-            //Act
-            $result = $test_RepeatCounter->countRepeats($haystack, $needle);
+        //Act
+        $result = $test_RepeatCounter->countRepeats($haystack, $needle);
 
-            //Assert
-            $this->assertEquals(1, $result);
-        }
+        //Assert
+        $this->assertEquals(1, $result);
+      }
 
-        function test_RepeatCounter_test9()
-        {
-            //Arrange
-            $test_RepeatCounter = new RepeatCounter;
-            $haystack = "a abba word ababba abba words abba test";
-            $needle = "abba";
+      function test_RepeatCounter_test9()
+      {
+        //Arrange
+        $test_RepeatCounter = new RepeatCounter;
+        $haystack = "a abba word ababba abba words abba test";
+        $needle = "abba";
 
-            //Act
-            $result = $test_RepeatCounter->countRepeats($haystack, $needle);
+        //Act
+        $result = $test_RepeatCounter->countRepeats($haystack, $needle);
 
-            //Assert
-            $this->assertEquals(3, $result);
-        }
+        //Assert
+        $this->assertEquals(3, $result);
+      }
 
-        // Capitalization differences in matches
+      // Capitalization differences in matches
 
-        function test_RepeatCounter_test10()
-        {
-            //Arrange
-            $test_RepeatCounter = new RepeatCounter;
-            $haystack = "a";
-            $needle = "A";
+      function test_RepeatCounter_test10()
+      {
+        //Arrange
+        $test_RepeatCounter = new RepeatCounter;
+        $haystack = "a";
+        $needle = "A";
 
-            //Act
-            $result = $test_RepeatCounter->countRepeats($haystack, $needle);
+        //Act
+        $result = $test_RepeatCounter->countRepeats($haystack, $needle);
 
-            //Assert
-            $this->assertEquals(1, $result);
-        }
+        //Assert
+        $this->assertEquals(1, $result);
+      }
 
-        function test_RepeatCounter_test11()
-        {
-            //Arrange
-            $test_RepeatCounter = new RepeatCounter;
-            $haystack = "A";
-            $needle = "a";
+      function test_RepeatCounter_test11()
+      {
+        //Arrange
+        $test_RepeatCounter = new RepeatCounter;
+        $haystack = "A";
+        $needle = "a";
 
-            //Act
-            $result = $test_RepeatCounter->countRepeats($haystack, $needle);
+        //Act
+        $result = $test_RepeatCounter->countRepeats($haystack, $needle);
 
-            //Assert
-            $this->assertEquals(1, $result);
-        }
+        //Assert
+        $this->assertEquals(1, $result);
+      }
 
-        function test_RepeatCounter_test12()
-        {
-            //Arrange
-            $test_RepeatCounter = new RepeatCounter;
-            $haystack = "aB";
-            $needle = "a";
+      function test_RepeatCounter_test12()
+      {
+        //Arrange
+        $test_RepeatCounter = new RepeatCounter;
+        $haystack = "aB";
+        $needle = "a";
 
-            //Act
-            $result = $test_RepeatCounter->countRepeats($haystack, $needle);
+        //Act
+        $result = $test_RepeatCounter->countRepeats($haystack, $needle);
 
-            //Assert
-            $this->assertEquals(0, $result);
-        }
+        //Assert
+        $this->assertEquals(0, $result);
+      }
 
-        function test_RepeatCounter_test13()
-        {
-            //Arrange
-            $test_RepeatCounter = new RepeatCounter;
-            $haystack = "Abba";
-            $needle = "abba";
+      function test_RepeatCounter_test13()
+      {
+        //Arrange
+        $test_RepeatCounter = new RepeatCounter;
+        $haystack = "Abba";
+        $needle = "abba";
 
-            //Act
-            $result = $test_RepeatCounter->countRepeats($haystack, $needle);
+        //Act
+        $result = $test_RepeatCounter->countRepeats($haystack, $needle);
 
-            //Assert
-            $this->assertEquals(1, $result);
-        }
+        //Assert
+        $this->assertEquals(1, $result);
+      }
 
-        function test_RepeatCounter_test14()
-        {
-            //Arrange
-            $test_RepeatCounter = new RepeatCounter;
-            $haystack = "abbA";
-            $needle = "abba";
+      function test_RepeatCounter_test14()
+      {
+        //Arrange
+        $test_RepeatCounter = new RepeatCounter;
+        $haystack = "abbA";
+        $needle = "abba";
 
-            //Act
-            $result = $test_RepeatCounter->countRepeats($haystack, $needle);
+        //Act
+        $result = $test_RepeatCounter->countRepeats($haystack, $needle);
 
-            //Assert
-            $this->assertEquals(1, $result);
-        }
+        //Assert
+        $this->assertEquals(1, $result);
+      }
 
-        function test_RepeatCounter_test15()
-        {
-            //Arrange
-            $test_RepeatCounter = new RepeatCounter;
-            $haystack = "a abb Word abAbba Abba";
-            $needle = "abba";
+      function test_RepeatCounter_test15()
+      {
+        //Arrange
+        $test_RepeatCounter = new RepeatCounter;
+        $haystack = "a abb Word abAbba Abba";
+        $needle = "abba";
 
-            //Act
-            $result = $test_RepeatCounter->countRepeats($haystack, $needle);
+        //Act
+        $result = $test_RepeatCounter->countRepeats($haystack, $needle);
 
-            //Assert
-            $this->assertEquals(1, $result);
-        }
+        //Assert
+        $this->assertEquals(1, $result);
+      }
 
-        function test_RepeatCounter_test16()
-        {
-            //Arrange
-            $test_RepeatCounter = new RepeatCounter;
-            $haystack = "a abBa word ababba Abba words abba test";
-            $needle = "abba";
+      function test_RepeatCounter_test16()
+      {
+        //Arrange
+        $test_RepeatCounter = new RepeatCounter;
+        $haystack = "a abBa word ababba Abba words abba test";
+        $needle = "abba";
 
-            //Act
-            $result = $test_RepeatCounter->countRepeats($haystack, $needle);
+        //Act
+        $result = $test_RepeatCounter->countRepeats($haystack, $needle);
 
-            //Assert
-            $this->assertEquals(3, $result);
-        }
-
-
-
+        //Assert
+        $this->assertEquals(3, $result);
+      }
     }
 
 ?>
