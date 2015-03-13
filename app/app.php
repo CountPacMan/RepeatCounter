@@ -1,6 +1,6 @@
 <?php
   require_once __DIR__."/../vendor/autoload.php";
-  require_once __DIR__."/../src/ScrabbleScore.php";
+  require_once __DIR__."/../src/RepeatCounter.php";
 
   $app = new Silex\Application();
   $app->register(new Silex\Provider\TwigServiceProvider(), array('twig.path' => __DIR__.'/../views'));
@@ -10,10 +10,11 @@
   });
 
   $app->post("/generate", function() use ($app) {
-    $letters = str_split($_POST['letters']);
-    $new_scrabble = new ScrabbleScore;
-    $score = $new_scrabble->getScore($letters);
-    return $app['twig']->render('generate.twig', array('letters' => $_POST['letters'], 'score' => $score));
+    $haystack = $_POST['haystack'];
+    $needle = $_POST['needle'];
+    $new_count = new RepeatCounter;
+    $count = $new_count->getCount($haystack, $needle);
+    return $app['twig']->render('generate.twig', array('haystack' => $haystack, 'needle' => $needle, 'count' => $count));
   });
 
   return $app;

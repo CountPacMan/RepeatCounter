@@ -3,22 +3,28 @@
 <head>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="/css/styles.css">
-  <title>Scrabble Score</title>
+  <title>Repeat Counter</title>
 </head>
 <body>
   <div class="container">
-    <h1>Scrabble Score</h1>
-    <p>Takes a word and returns the Scrabble score.</p>
+    <h1>Repeat Counter</h1>
+    <p>Returns how frequently a word appears in a given string. The user inputs both the word and the string of words to check. Repeat Counter checks for full word matches only.</p>
   </div>
   <form class="center" action="/generate" method="post">
     <div class="row">
       <div class="form-group col-lg-4">
-        <label for="letters">Enter word or unseperated letters:</label>
-        <input id="letters" name="letters" type="text" maxlength="200" required>
+        <label for="haystack">Enter input to check against</label>
+        <input id="haystack" name="haystack" type="text" maxlength="200" required>
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group col-lg-4">
+        <label for="needle">Enter single word to count</label>
+        <input id="needle" name="needle" type="text" maxlength="200" required>
       </div>
     </div>
     <div>
-      <button type="submit" class="btn-primary">Get Score!</button>
+      <button type="submit" class="btn-primary">Get Count!</button>
     </div>
   </form>
 </body>
