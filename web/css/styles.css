@@ -16,5 +16,10 @@ body {
 }
 
 .wide-input {
-    width: 600px;
+  width: 600px;
+}
+
+.highlight {
+  color: #FF3333;
+  font-weight: bold;
 }
