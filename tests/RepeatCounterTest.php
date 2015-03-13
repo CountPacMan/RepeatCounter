@@ -30,6 +30,7 @@
 
     class RepeatCounterTest extends PHPUnit_Framework_TestCase
     {
+        // Single char words
 
         function test_RepeatCounter_test1()
         {
@@ -115,6 +116,8 @@
             $this->assertEquals(2, $result);
         }
 
+        // Multi char words
+
         function test_RepeatCounter_test7()
         {
             //Arrange
@@ -156,6 +159,23 @@
             //Assert
             $this->assertEquals(3, $result);
         }
+
+        // Capitalization differences in matches
+
+        function test_RepeatCounter_test10()
+        {
+            //Arrange
+            $test_RepeatCounter = new RepeatCounter;
+            $haystack = "a";
+            $needle = "A";
+
+            //Act
+            $result = $test_RepeatCounter->getCount($haystack, $needle);
+
+            //Assert
+            $this->assertEquals(1, $result);
+        }
+
 
 
     }
