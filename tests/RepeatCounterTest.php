@@ -40,7 +40,7 @@
             $needle = "a";
 
             //Act
-            $result = $test_RepeatCounter->getCount($haystack, $needle);
+            $result = $test_RepeatCounter->countRepeats($haystack, $needle);
 
             //Assert
             $this->assertEquals(1, $result);
@@ -54,7 +54,7 @@
             $needle = "b";
 
             //Act
-            $result = $test_RepeatCounter->getCount($haystack, $needle);
+            $result = $test_RepeatCounter->countRepeats($haystack, $needle);
 
             //Assert
             $this->assertEquals(0, $result);
@@ -68,7 +68,7 @@
             $needle = "a";
 
             //Act
-            $result = $test_RepeatCounter->getCount($haystack, $needle);
+            $result = $test_RepeatCounter->countRepeats($haystack, $needle);
 
             //Assert
             $this->assertEquals(0, $result);
@@ -82,7 +82,7 @@
             $needle = "a";
 
             //Act
-            $result = $test_RepeatCounter->getCount($haystack, $needle);
+            $result = $test_RepeatCounter->countRepeats($haystack, $needle);
 
             //Assert
             $this->assertEquals(0, $result);
@@ -96,7 +96,7 @@
             $needle = "a";
 
             //Act
-            $result = $test_RepeatCounter->getCount($haystack, $needle);
+            $result = $test_RepeatCounter->countRepeats($haystack, $needle);
 
             //Assert
             $this->assertEquals(2, $result);
@@ -110,7 +110,7 @@
             $needle = "a";
 
             //Act
-            $result = $test_RepeatCounter->getCount($haystack, $needle);
+            $result = $test_RepeatCounter->countRepeats($haystack, $needle);
 
             //Assert
             $this->assertEquals(2, $result);
@@ -126,7 +126,7 @@
             $needle = "abba";
 
             //Act
-            $result = $test_RepeatCounter->getCount($haystack, $needle);
+            $result = $test_RepeatCounter->countRepeats($haystack, $needle);
 
             //Assert
             $this->assertEquals(1, $result);
@@ -140,7 +140,7 @@
             $needle = "abba";
 
             //Act
-            $result = $test_RepeatCounter->getCount($haystack, $needle);
+            $result = $test_RepeatCounter->countRepeats($haystack, $needle);
 
             //Assert
             $this->assertEquals(1, $result);
@@ -154,7 +154,7 @@
             $needle = "abba";
 
             //Act
-            $result = $test_RepeatCounter->getCount($haystack, $needle);
+            $result = $test_RepeatCounter->countRepeats($haystack, $needle);
 
             //Assert
             $this->assertEquals(3, $result);
@@ -170,7 +170,7 @@
             $needle = "A";
 
             //Act
-            $result = $test_RepeatCounter->getCount($haystack, $needle);
+            $result = $test_RepeatCounter->countRepeats($haystack, $needle);
 
             //Assert
             $this->assertEquals(1, $result);
@@ -184,7 +184,7 @@
             $needle = "a";
 
             //Act
-            $result = $test_RepeatCounter->getCount($haystack, $needle);
+            $result = $test_RepeatCounter->countRepeats($haystack, $needle);
 
             //Assert
             $this->assertEquals(1, $result);
@@ -198,7 +198,7 @@
             $needle = "a";
 
             //Act
-            $result = $test_RepeatCounter->getCount($haystack, $needle);
+            $result = $test_RepeatCounter->countRepeats($haystack, $needle);
 
             //Assert
             $this->assertEquals(0, $result);
@@ -212,7 +212,7 @@
             $needle = "abba";
 
             //Act
-            $result = $test_RepeatCounter->getCount($haystack, $needle);
+            $result = $test_RepeatCounter->countRepeats($haystack, $needle);
 
             //Assert
             $this->assertEquals(1, $result);
@@ -226,7 +226,7 @@
             $needle = "abba";
 
             //Act
-            $result = $test_RepeatCounter->getCount($haystack, $needle);
+            $result = $test_RepeatCounter->countRepeats($haystack, $needle);
 
             //Assert
             $this->assertEquals(1, $result);
@@ -240,7 +240,7 @@
             $needle = "abba";
 
             //Act
-            $result = $test_RepeatCounter->getCount($haystack, $needle);
+            $result = $test_RepeatCounter->countRepeats($haystack, $needle);
 
             //Assert
             $this->assertEquals(1, $result);
@@ -254,7 +254,7 @@
             $needle = "abba";
 
             //Act
-            $result = $test_RepeatCounter->getCount($haystack, $needle);
+            $result = $test_RepeatCounter->countRepeats($haystack, $needle);
 
             //Assert
             $this->assertEquals(3, $result);
