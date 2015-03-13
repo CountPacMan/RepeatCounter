@@ -176,6 +176,90 @@
             $this->assertEquals(1, $result);
         }
 
+        function test_RepeatCounter_test11()
+        {
+            //Arrange
+            $test_RepeatCounter = new RepeatCounter;
+            $haystack = "A";
+            $needle = "a";
+
+            //Act
+            $result = $test_RepeatCounter->getCount($haystack, $needle);
+
+            //Assert
+            $this->assertEquals(1, $result);
+        }
+
+        function test_RepeatCounter_test12()
+        {
+            //Arrange
+            $test_RepeatCounter = new RepeatCounter;
+            $haystack = "aB";
+            $needle = "a";
+
+            //Act
+            $result = $test_RepeatCounter->getCount($haystack, $needle);
+
+            //Assert
+            $this->assertEquals(0, $result);
+        }
+
+        function test_RepeatCounter_test13()
+        {
+            //Arrange
+            $test_RepeatCounter = new RepeatCounter;
+            $haystack = "Abba";
+            $needle = "abba";
+
+            //Act
+            $result = $test_RepeatCounter->getCount($haystack, $needle);
+
+            //Assert
+            $this->assertEquals(1, $result);
+        }
+
+        function test_RepeatCounter_test14()
+        {
+            //Arrange
+            $test_RepeatCounter = new RepeatCounter;
+            $haystack = "abbA";
+            $needle = "abba";
+
+            //Act
+            $result = $test_RepeatCounter->getCount($haystack, $needle);
+
+            //Assert
+            $this->assertEquals(1, $result);
+        }
+
+        function test_RepeatCounter_test15()
+        {
+            //Arrange
+            $test_RepeatCounter = new RepeatCounter;
+            $haystack = "a abb Word abAbba Abba";
+            $needle = "abba";
+
+            //Act
+            $result = $test_RepeatCounter->getCount($haystack, $needle);
+
+            //Assert
+            $this->assertEquals(1, $result);
+        }
+
+        function test_RepeatCounter_test16()
+        {
+            //Arrange
+            $test_RepeatCounter = new RepeatCounter;
+            $haystack = "a abBa word ababba Abba words abba test";
+            $needle = "abba";
+
+            //Act
+            $result = $test_RepeatCounter->getCount($haystack, $needle);
+
+            //Assert
+            $this->assertEquals(3, $result);
+        }
+
 
 
     }
