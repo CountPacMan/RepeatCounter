@@ -14,6 +14,7 @@
     $needle = $_POST['needle'];
     $new_count = new RepeatCounter;
     $count = $new_count->getCount($haystack, $needle);
+    $haystack = explode(" ", $haystack);
     return $app['twig']->render('generate.twig', array('haystack' => $haystack, 'needle' => $needle, 'count' => $count));
   });
 
