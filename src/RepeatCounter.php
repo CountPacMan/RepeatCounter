@@ -4,7 +4,8 @@
 
       function getCount($haystack, $needle) {
         $count = 0;
-        foreach (str_split($haystack) as $word) {
+        $exploded_haystack = explode(" ", $haystack);
+        foreach ($exploded_haystack as $word) {
           $word == $needle ? $count++ : "";
         }
         return $count;
