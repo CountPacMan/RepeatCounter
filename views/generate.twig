@@ -10,7 +10,7 @@
     <h1>Repeat Counter</h1>
     <h4>Occurences of <span class="needle">{{ needle }}</span> in
       {% for word in haystack %}
-      <span class={{ word|lower == needle|lower ? 'needle' : 'haystack' }}>{{ word }} </span>
+        <span class={{ word|lower == needle|lower ? 'needle' : 'haystack' }}>{{ word }} </span>
       {% endfor %}
        = <strong>{{ count }}</strong></h4>
   </div>
