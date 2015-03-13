@@ -115,6 +115,48 @@
             $this->assertEquals(2, $result);
         }
 
+        function test_RepeatCounter_test7()
+        {
+            //Arrange
+            $test_RepeatCounter = new RepeatCounter;
+            $haystack = "abba";
+            $needle = "abba";
+
+            //Act
+            $result = $test_RepeatCounter->getCount($haystack, $needle);
+
+            //Assert
+            $this->assertEquals(1, $result);
+        }
+
+        function test_RepeatCounter_test8()
+        {
+            //Arrange
+            $test_RepeatCounter = new RepeatCounter;
+            $haystack = "a abb word ababba abba";
+            $needle = "abba";
+
+            //Act
+            $result = $test_RepeatCounter->getCount($haystack, $needle);
+
+            //Assert
+            $this->assertEquals(1, $result);
+        }
+
+        function test_RepeatCounter_test9()
+        {
+            //Arrange
+            $test_RepeatCounter = new RepeatCounter;
+            $haystack = "a abba word ababba abba words abba test";
+            $needle = "abba";
+
+            //Act
+            $result = $test_RepeatCounter->getCount($haystack, $needle);
+
+            //Assert
+            $this->assertEquals(3, $result);
+        }
+
 
     }
 
