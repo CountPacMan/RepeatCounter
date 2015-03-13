@@ -19,7 +19,12 @@ body {
   width: 600px;
 }
 
-.highlight {
+.needle {
   color: #FF3333;
+  font-weight: bold;
+}
+
+.haystack {
+  color: #009933;
   font-weight: bold;
 }
