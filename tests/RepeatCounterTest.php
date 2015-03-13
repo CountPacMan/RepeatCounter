@@ -45,6 +45,76 @@
             $this->assertEquals(1, $result);
         }
 
+        function test_RepeatCounter_test2()
+        {
+            //Arrange
+            $test_RepeatCounter = new RepeatCounter;
+            $haystack = "a";
+            $needle = "b";
+
+            //Act
+            $result = $test_RepeatCounter->getCount($haystack, $needle);
+
+            //Assert
+            $this->assertEquals(0, $result);
+        }
+
+        function test_RepeatCounter_test3()
+        {
+            //Arrange
+            $test_RepeatCounter = new RepeatCounter;
+            $haystack = "ab";
+            $needle = "a";
+
+            //Act
+            $result = $test_RepeatCounter->getCount($haystack, $needle);
+
+            //Assert
+            $this->assertEquals(0, $result);
+        }
+
+        function test_RepeatCounter_test4()
+        {
+            //Arrange
+            $test_RepeatCounter = new RepeatCounter;
+            $haystack = "aa";
+            $needle = "a";
+
+            //Act
+            $result = $test_RepeatCounter->getCount($haystack, $needle);
+
+            //Assert
+            $this->assertEquals(0, $result);
+        }
+
+        function test_RepeatCounter_test5()
+        {
+            //Arrange
+            $test_RepeatCounter = new RepeatCounter;
+            $haystack = "a a";
+            $needle = "a";
+
+            //Act
+            $result = $test_RepeatCounter->getCount($haystack, $needle);
+
+            //Assert
+            $this->assertEquals(2, $result);
+        }
+
+        function test_RepeatCounter_test6()
+        {
+            //Arrange
+            $test_RepeatCounter = new RepeatCounter;
+            $haystack = "a b a";
+            $needle = "a";
+
+            //Act
+            $result = $test_RepeatCounter->getCount($haystack, $needle);
+
+            //Assert
+            $this->assertEquals(2, $result);
+        }
+
 
     }
 
